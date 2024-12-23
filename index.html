@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Developer Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="changer">
+
+
+    </div>
+    <script>
+          var a=0;
+function update()
+{
+    var mychanger = document.querySelector("changer");
+    a++;
+    if(a>=800)
+    {
+        clearInterval(ctime);
+        msg();
+    }
+    mychanger.style.width=`${a}px`;
+}
+
+var ctime = setInterval("update()",10);
+
+
+function msg()
+{
+    alert("Resume update");
+    window.location.href="index.html";
+}
+        function resumegenerator() {
+            var name = prompt("enter name");
+            var job = prompt("enter job name");
+            var job2 = prompt("enter  second job name");
+            var Email = prompt("enter email id");
+            var phone = prompt("enter phone no");
+            var location = prompt("enter location");
+            var education = prompt("enter education");
+            var company = prompt("enter company name");
+            var company2 = prompt("enter second company name");
+
+
+
+
+            var mytemp = document.getElementsByClassName('changer');
+                       mytemp[0].innerHTML=`<header>
+
+        
+        <div class="resume">
+    <header class="header">
+      <h1>${name}</h1>
+      <p>Frontend Developer</p>
+      <p>Email:${Email} | Phone: ${phone} | Location: ${location}</p>
+    </header>
+
+    <div class="main-content">
+      <section class="profile">
+        <h2>Web Developer</h2>
+        <p>Web developer with 1years of experience creating responsive and interactive websites using HTML, CSS, and JavaScript. Adept at translating design mockups into pixel-perfect web pages and optimizing performance.</p>
+      </section>
+
+      <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML5, CSS3, JavaScript</li>
+          <li>Responsive Design & Cross-Browser Compatibility</li>
+          <li>CSS Frameworks: Bootstrap, Tailwind CSS</li>
+          <li>Version Control: Git/GitHub</li>
+          <li>Frontend Frameworks: React, Vue.js</li>
+        </ul>
+      </section>
+
+      <section class="experience">
+        <h2>Experience</h2>
+        <div class="job">
+          <h3>${job}</h3>
+          <p>${company}</p>
+          <ul>
+            <li>Graphic and maintained user-friendly web interfaces for e-commerce and SaaS platforms.</li>
+            <li>Collaborated with designers to ensure seamless UX and implemented responsive designs.</li>
+            <li>Optimized website performance, achieving a 25% reduction in page load times.</li>
+          </ul>
+        </div>
+        <div class="job2">
+          <h3>${job2}</h3>
+          <p>${company2}</p>
+          <ul>
+            <li>Converted PSD mockups into responsive web pages using HTML, CSS, and JavaScript.</li>
+            <li>Implemented interactive features such as carousels, dropdowns, and modals.</li>
+            <li>Fixed cross-browser compatibility issues to enhance website accessibility.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="education">
+        <h2>${education}</h2>
+        <p><strong>Bachelor of Computer Science</strong> - University of CCS (2019 - 2022)</p>
+      </section>
+
+      <section class="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Portfolio Website:</strong> Personal website built with React, showcasing my projects and skills. (<a href="#">View Project</a>)</li>
+          <li><strong>E-commerce Website:</strong> Developed a fully responsive e-commerce platform using HTML, CSS, and JavaScript. (<a href="#">View Project</a>)</li>
+        </ul>
+      </section>
+    </div>
+  </div>;`
+    }
+
+        
+     resumegenerator();
+    </script>
+</body>
+
+</html>
